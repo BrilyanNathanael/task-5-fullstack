@@ -5,7 +5,7 @@ In this project, the technology used:
 - HTML
 - CSS
 - JQuery
-- Laravel
+- Laravel9
 
 ## Installation
 
@@ -22,6 +22,22 @@ php artisan key:generate
 ```
 php artisan migrate --seed
 ```
+
+## How to use
+By default, this system does not use the API but the Web. To run a function on the API, you have to do several steps.
+
+- Run on terminal:
+```
+php artisan jwt:secret
+```
+
+- Go to the auth.php file in the config folder. Then, change the value of guards to defaults, change web to api, so that it looks like this:
+```
+ 'defaults' => [
+     'guard' => 'web',
+     'passwords' => 'users',
+ ],
+ ```
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
