@@ -34,7 +34,7 @@ php artisan jwt:secret
 - Go to the auth.php file in the config folder. Then, change the value of guards to defaults, change web to api, so that it looks like this:
 ```
  'defaults' => [
-     'guard' => 'web',
+     'guard' => 'api',
      'passwords' => 'users',
  ],
  ```
